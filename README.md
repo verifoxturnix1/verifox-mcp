@@ -76,6 +76,21 @@ development against the API on port 8001, set it to `http://localhost:8001`.
 
 The tools will appear in Claude's tool list.
 
+## Remote (HTTP) mode
+
+The same server also runs as a **streamable-HTTP** MCP endpoint (for Smithery,
+claude.ai connectors, and other remote MCP clients). Set `MCP_TRANSPORT=http`
+(or a `PORT`) and it listens on `POST /mcp` with a `GET /health` check:
+
+```bash
+MCP_TRANSPORT=http PORT=8080 node dist/index.js
+# or: docker build -t verifox-mcp . && docker run -p 8080:8080 verifox-mcp
+```
+
+In HTTP mode the Verifox API key is read **per request** from the
+`Authorization: Bearer <foxkey>` header (also accepts `x-api-key` or `?api_key=`)
+— so one hosted endpoint serves many users, each on their own credits.
+
 ## Usage Examples
 
 In Claude Desktop, just ask:
