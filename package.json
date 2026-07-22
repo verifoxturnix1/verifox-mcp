@@ -41,5 +41,9 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "@types/node": "^20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verifoxturnix1/verifox-mcp.git"
   }
 }
