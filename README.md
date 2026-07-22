@@ -1,5 +1,7 @@
 # Verifox MCP Server
 
+[![smithery badge](https://smithery.ai/badge/verifox-ai/email-verifier)](https://smithery.ai/servers/verifox-ai/email-verifier)
+
 MCP (Model Context Protocol) server that gives Claude and other AI assistants the **Verifox** API — **verify email deliverability** and **find business emails**, both single and in bulk.
 
 ## Quick start (published package)
